@@ -1,0 +1,59 @@
+/* product-list.component.css */
+
+div {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  strong {
+    font-weight: bold;
+  }
+  
+  span {
+    margin-right: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #007bff;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  a.delete-link {
+    color: #dc3545;
+  }
+  
+  a.delete-link:hover {
+    text-decoration: underline;
+    color: #a10d16;
+  }
+  
+  /* Style for the "No products available" message */
+  div:not(.product-list) {
+    color: #dc3545;
+    font-weight: bold;
+  }
+  

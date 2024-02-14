@@ -1,0 +1,39 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "iPhone 12",
+      "category": "Smartphone",
+      "price": 999,
+      "description": "The latest iPhone model with advanced features."
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy S21",
+      "category": "Smartphone",
+      "price": 899,
+      "description": "Samsung's flagship smartphone with a stunning display."
+    },
+    {
+      "id": 3,
+      "name": "Google Pixel 5",
+      "category": "Smartphone",
+      "price": 699,
+      "description": "Google's Pixel series featuring excellent camera capabilities."
+    },
+    {
+      "id": 4,
+      "name": "OnePlus 9",
+      "category": "Smartphone",
+      "price": 799,
+      "description": "High-performance smartphone from OnePlus."
+    },
+    {
+      "id": 5,
+      "name": "Xiaomi Redmi Note 10",
+      "category": "Smartphone",
+      "price": 299,
+      "description": "Budget-friendly smartphone with a large battery."
+    }
+  ]
+}

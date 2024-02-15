@@ -28,19 +28,6 @@ describe('ProductListComponent', () => {
     fixture.detectChanges();
   });
 
-  fit('should_create_product_list_component', () => {
-    expect((component as any)).toBeTruthy();
-  });
-
-  // fit('should_delete_a_product', () => {
-  //   const productId = 1;
-  //   spyOn((productService as any), 'deleteProduct').and.callThrough();
-  //   (component as any).deleteProduct(productId);
-  //   expect((productService as any).deleteProduct).toHaveBeenCalledWith(productId);
-  //   const req = httpMock.expectOne((productService as any).baseUrl + '/product/' + productId);
-  //   expect(req.request.method).toBe('DELETE');
-  //   req.flush({}); // Respond with no data.
-  // });
 
   fit('should_delete_a_product', () => {
     expect((component as any).deleteProduct).toBeDefined();

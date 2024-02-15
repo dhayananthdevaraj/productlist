@@ -32,7 +32,7 @@ describe('EditProductComponent', () => {
     component = fixture.componentInstance;
   });
 
-  it('should_call_updateProduct_and_navigate_on_form_submission', () => {
+  fit('should_call_updateProduct_and_navigate_on_form_submission', () => {
     // Arrange
     spyOn(TestBed.inject(Router), 'navigate'); // Use TestBed.inject to get the Router instance
     productServiceSpy.getProductById.and.returnValue(of({ id: 1, name: 'Test', category: 'TestCategory', price: 10, description: 'Test Description' }));

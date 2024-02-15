@@ -27,18 +27,26 @@ describe('AddProductComponent', () => {
     fixture.detectChanges();
   });
 
-  fit('should_create_add_product_component', () => {
-    expect((component as any)).toBeTruthy();
-  });
+  fit('should_display_validation_messages_on_form_submission_with_empty_fields', () => {
+    // Arrange: Set form values to be empty
+    component.productForm.patchValue({
+      name: '',
+      category: '',
+      price: null,
+      description: ''
+    });
 
-  fit('should_have_h2_tag_with_Add_Product', () => {
-    const h2Elements =
-      fixture.debugElement.nativeElement.querySelectorAll('h2');
-    const addProductTitle = h2Elements[0].textContent;
-    expect(addProductTitle).toEqual('Add Product');
-  });
+    // Act: Trigger form submission
+    (component as any).addProduct();
+    fixture.detectChanges(); // Update the view after changes
 
-  fit('should_have_a_method_named_addProduct', () => {
-    expect((component as any).addProduct).toBeDefined();
+    // Assert: Check if validation messages are displayed
+    const errorElements = fixture.nativeElement.querySelectorAll('.error');
+    expect(errorElements.length).toBe(3); // Assuming there are three error messages
+
+    // Check each error message individually
+    expect(errorElements[0].textContent.trim()).toBe('Product Name is required.');
+    expect(errorElements[1].textContent.trim()).toBe('Product Category is required.');
+    expect(errorElements[2].textContent.trim()).toBe('Price is required and must be greater than or equal to 0.');
   });
 });
